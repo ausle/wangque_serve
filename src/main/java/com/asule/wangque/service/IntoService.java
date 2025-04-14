@@ -1,0 +1,18 @@
+package com.asule.wangque.service;
+
+import com.asule.wangque.entity.Magazine;
+import com.asule.wangque.mapper.MagazineMapper;
+import jakarta.annotation.Resource;
+import org.springframework.stereotype.Service;
+
+@Service
+public class IntoService {
+
+    @Resource
+    MagazineMapper magazineMapper;
+
+    public Magazine listAll(long id) {
+        return magazineMapper.selectByPrimaryKey(id);
+    }
+
+}
