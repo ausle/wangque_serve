@@ -1,0 +1,21 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    username: root
+    password: Aa123456
+    url: jdbc:mysql://localhost:3306/wangque?characterEncoding=UTF8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  rabbitmq:
+    host: 192.168.0.200
+    port: 5672
+    username: root
+    password: root
+
+mybatis:
+  # 给pojo实体类起别名
+  type-aliases-package: com.asule.wangquemain.entity
+  # 接口的配置文件的位置
+  mapper-locations: classpath:mapper/*.xml
